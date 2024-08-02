@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: ' http://localhost:5219/api', // Certifique-se de que a URL e porta estejam corretas
+  baseURL: ' http://localhost:5219/api',
 });
 
 export const getRandomPokemons = () => api.get('/pokemon/random');
