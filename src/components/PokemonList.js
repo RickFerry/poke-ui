@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { getRandomPokemons } from '../api/pokemonApi';
+import { Link } from 'react-router-dom';
 
 const PokemonList = () => {
   const [pokemons, setPokemons] = useState([]);
