@@ -27,7 +27,9 @@ const PokemonList = () => {
       {error && <p>{error}</p>}
       <ul>
         {pokemons.map(pokemon => (
-          <li key={pokemon.id}>{pokemon.name}</li>
+          <li key={pokemon.id}>
+            <Link to={`/pokemon/${pokemon.id}`}>{pokemon.name}</Link>
+          </li>
         ))}
       </ul>
     </div>
