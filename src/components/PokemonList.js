@@ -8,7 +8,12 @@ const PokemonList = () => {
   useEffect(() => {
     getRandomPokemons()
       .then(response => {
-        setPokemons(response.data);
+        // Verifique se response.data é um array
+        if (Array.isArray(response.data)) {
+          setPokemons(response.data);
+        } else {
+          setError('Invalid data format');
+        }
       })
       .catch(err => {
         setError('Failed to fetch pokemons');
